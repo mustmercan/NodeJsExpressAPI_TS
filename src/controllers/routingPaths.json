@@ -1,0 +1,36 @@
+{
+    "paths": [
+        {
+            "name": "api",
+            "security": false,
+            "paths": [
+                {
+                    "name": "login",
+                    "all": "../api/login/login",
+                    "security": false
+                },
+                {
+                    "name": "logout",
+                    "all": "../api/login/logout",
+                    "security": true
+                },
+                {
+                    "name": "user",
+                    "security": false,
+                    "paths": [
+                        {
+                            "name": "register",
+                            "post": "../api/user/register",
+                            "security": false
+                        },
+                        {
+                            "name": "list",
+                            "all": "../api/user/list",
+                            "security": true
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
